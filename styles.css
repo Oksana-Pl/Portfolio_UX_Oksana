@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Inter, sans-serif;
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .page-wrapper {
+    width: 100%;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 44px 100px;
+    border: 1px solid #ececec;
+    background: #ffffff;
+  }
+  
+  .header__name {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .header__nav {
+    display: flex;
+    gap: 48px;
+  }
+  
+  .header__link {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .header__link--active {
+    color: #9747ff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  /* Hero */
+  .hero {
+    background: #fffdfc;
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+  }
+  
+  .hero__logo,
+  .footer__logo {
+    position: relative;
+    width: 98px;
+    height: 169px;
+  }
+  
+  .logo-shape {
+    position: absolute;
+    background: #e4e0f9;
+  }
+  
+  .logo-shape--top {
+    width: 98px;
+    height: 126px;
+    top: 0;
+    left: 0;
+  }
+  
+  .logo-shape--bottom {
+    width: 69px;
+    height: 122px;
+    left: 14px;
+    top: 47px;
+  }
+  
+  .hero__content {
+    max-width: 991px;
+    text-align: center;
+  }
+  
+  .hero__subtitle {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .hero__text {
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  
+  .hero__links {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+  
+  .social-links,
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .social-links a,
+  .email-link a,
+  .footer__links a {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  /* Section titles */
+  .section-title,
+  .section-heading {
+    text-align: center;
+  }
+  
+  .section-title h2,
+  .section-heading {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+  }
+  
+  /* Case Studies */
+  .case-study {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    padding: 71px 99px 79px;
+    background: #faf9ff;
+  }
+  
+  .case-study--reverse {
+    flex-direction: row;
+  }
+  
+  .case-study__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .case-study__content h3 {
+    font-size: 36px;
+    font-weight: 500;
+  }
+  
+  .case-study__content p {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+  }
+  
+  .case-study__images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .case-study__images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .tags {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .tag {
+    padding: 15px 20px;
+    border: 1px solid #4d6d89;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #4d6d89;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 24px;
+    background: #4d6d89;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  /* Strengths */
+  .strengths {
+    padding: 50px 86px;
+  }
+  
+  .strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+    margin-top: 50px;
+  }
+  
+  .card {
+    min-height: 280px;
+    padding: 30px 20px;
+    background: #faf9ff;
+    border: 1px solid #e4e0f9;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .card h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  
+  .card p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  /* References */
+  .references {
+    padding: 50px 86px;
+  }
+  
+  .references__subtitle {
+    text-align: center;
+    font-size: 24px;
+    margin: 30px 0 50px;
+  }
+  
+  .references-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+  }
+  
+  .reference-card {
+    min-height: 269px;
+    padding: 30px 20px;
+    background: #fffdfc;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .reference-card h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .reference-card p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  
+  .reference-card a {
+    font-size: 18px;
+  }
+  
+  /* CTA */
+  .cta {
+    padding: 100px 80px;
+    background: #fffdfc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    text-align: center;
+  }
+  
+  .cta__content {
+    max-width: 991px;
+  }
+  
+  .cta__title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .cta__text {
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  
+  .btn--cta {
+    margin-top: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 47px 100px;
+    border-top: 1px solid #ececec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1400px) {
+    .strengths-grid,
+    .references-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .case-study {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header,
+    .hero,
+    .case-study,
+    .strengths,
+    .references,
+    .cta,
+    .footer {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .header {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .hero__text,
+    .cta__text,
+    .cta__title,
+    .hero__subtitle {
+      font-size: 24px;
+    }
+  
+    .section-title h2,
+    .section-heading {
+      font-size: 36px;
+    }
+  
+    .strengths-grid,
+    .references-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero__links,
+    .footer {
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-start;
+    }
+  }
