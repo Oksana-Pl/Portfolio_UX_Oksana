@@ -57,6 +57,8 @@ p {
 
 .section--alt {
   background: #faf9ff;
+  margin-bottom: 60px;
+  border-radius: 20px;
 }
 
 .section-title {
@@ -150,6 +152,13 @@ p {
     width: 120px; /* можешь менять */
     height: auto;
     object-fit: contain;
+    animation: logoFloat 4s ease-in-out infinite;
+  }
+
+  @keyframes logoFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
   }
 
 .hero-content {
