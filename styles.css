@@ -839,16 +839,29 @@ text-transform: uppercase;
   }
   
   .result-card__circle {
-    width: 110px;
-    height: 110px;
-    border: 8px solid #4d6d89;
+    width: 90px;
+    height: 90px;
+    border: 4px solid #4d6d89;
     border-radius: 50%;
+    position: relative;
+  }
+  
+  .result-card__circle::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+    font-size: 52px;
+    font-weight: 600;
+    color: #4d6d89;
+    line-height: 1;
   }
   
   .result-card__title {
     margin-bottom: 0;
     color: #4d6d89;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-align: center;
   }
   
@@ -877,7 +890,7 @@ text-transform: uppercase;
       border-width: 6px;
     }
   }
-  
+
 /* =========================
    Responsive
 ========================= */
