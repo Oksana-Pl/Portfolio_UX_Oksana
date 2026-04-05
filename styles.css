@@ -78,44 +78,60 @@ p {
    Header
 ========================= */
 
-.site-header {
-  border-bottom: 1px solid #ececec;
-  background: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+ /* Header */
+ .header {
+    width: 100%;
+    border-bottom: 1px solid #000;
+   
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-content a {
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+    font-weight: 500;
+    position: relative;      /* ← чтобы ::after цеплялся */
+    display: inline-block;   /* ← чтобы была своя строка/высота */
+    padding-bottom: 4px;     /* ← чтобы подчёркивание не прилипало к тексту */
+    transition: color 0.3s ease;
+  }
+  
+  /* активная */
+.header-content a.active {
+    color: #9747FF;
+  }
+  
+  /* ховер — цвет посветлее */
+  .header-content a:hover {
+    color: #b47cff;
+  }
 
-.header-container {
-  min-height: 88px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-.logo-text {
-  font-size: 1.125rem;
-  font-weight: 400;
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.nav-link {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.nav-link--active {
-  color: #9747ff;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
+  /* линия под ссылкой */
+.header-content a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;               /* можно -3px, если хочешь чуть ниже */
+    width: 0;
+    height: 2px;
+    background-color: #b47cff;
+    transition: width 0.3s ease;
+  }
+  
+  /* при наведении — линия выезжает */
+  .header-content a:hover::after {
+    width: 100%;
+  }
+  
 
 /* =========================
    Hero
@@ -133,33 +149,12 @@ p {
   text-align: center;
 }
 
-.hero-mark,
-.footer-mark {
-  position: relative;
-  width: 98px;
-  height: 169px;
-  flex-shrink: 0;
-}
-
-.hero-mark__top,
-.hero-mark__bottom {
-  position: absolute;
-  background: #e4e0f9;
-}
-
-.hero-mark__top {
-  width: 98px;
-  height: 126px;
-  top: 0;
-  left: 0;
-}
-
-.hero-mark__bottom {
-  width: 69px;
-  height: 122px;
-  top: 47px;
-  left: 14px;
-}
+.hero-logo {
+    display: block;
+    width: 120px; /* можешь менять */
+    height: auto;
+    object-fit: contain;
+  }
 
 .hero-content {
   max-width: 920px;
@@ -170,12 +165,6 @@ p {
   margin-bottom: 32px;
 }
 
-.hero-title {
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 400;
-  line-height: 1.35;
-  margin-bottom: 24px;
-}
 
 .hero-description {
   font-size: clamp(1.125rem, 1.5vw, 1.5rem);
