@@ -58,9 +58,10 @@ ul {
 }
 
 .section--alt {
-  background: #faf9ff;
+  background: #FFFDFC;
   border-radius: 20px;
   margin-bottom: 60px;
+  border: 1px solid #ECECEC;
 }
 
 .section-title {
