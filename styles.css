@@ -104,18 +104,15 @@ p {
     padding-bottom: 4px;     /* ← чтобы подчёркивание не прилипало к тексту */
     transition: color 0.3s ease;
   }
-  
-  /* активная */
+ 
 .header-content a.active {
     color: #9747FF;
   }
-  
-  /* ховер — цвет посветлее */
+
   .header-content a:hover {
     color: #b47cff;
   }
 
-  /* линия под ссылкой */
 .header-content a::after {
     content: "";
     position: absolute;
@@ -127,7 +124,6 @@ p {
     transition: width 0.3s ease;
   }
   
-  /* при наведении — линия выезжает */
   .header-content a:hover::after {
     width: 100%;
   }
@@ -165,7 +161,6 @@ p {
   margin-bottom: 32px;
 }
 
-
 .hero-description {
   font-size: clamp(1.125rem, 1.5vw, 1.5rem);
   color: #333;
@@ -187,11 +182,16 @@ p {
   gap: 14px;
 }
 
-.hero-links a,
-.footer-links a,
-.text-link {
-  font-size: 1.125rem;
-}
+.hero-links a {
+    color: #4D6D89;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .hero-links a:hover {
+    color: #9747FF; 
+  }
 
 /* =========================
    Case Study
@@ -399,6 +399,16 @@ p {
   justify-content: space-between;
   gap: 32px;
 }
+.footer-links a {
+    color: #000;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  footer a:hover {
+    color: #9747FF; 
+  }
 
 /* =========================
    Responsive
