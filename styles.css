@@ -34,8 +34,10 @@ a {
 h1,
 h2,
 h3,
-p {
+p,
+ul {
   margin: 0;
+  padding: 0;
 }
 
 /* =========================
@@ -57,14 +59,15 @@ p {
 
 .section--alt {
   background: #faf9ff;
-  margin-bottom: 60px;
   border-radius: 20px;
+  margin-bottom: 60px;
 }
 
 .section-title {
   font-family: "Josefin Sans", sans-serif;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: 40px;
   font-weight: 500;
+  line-height: 1.2;
   text-align: center;
   margin-bottom: 48px;
 }
@@ -73,63 +76,96 @@ p {
   max-width: 900px;
   margin: -12px auto 48px;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* =========================
    Header
 ========================= */
 
- /* Header */
- .header {
-    width: 100%;
-    border-bottom: 1px solid #000;
-   
-  }
-  
-  .header-content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header-content a {
-    text-decoration: none;
-    color: black;
-    margin-left: 30px;
-    font-weight: 500;
-    position: relative;      /* ← чтобы ::after цеплялся */
-    display: inline-block;   /* ← чтобы была своя строка/высота */
-    padding-bottom: 4px;     /* ← чтобы подчёркивание не прилипало к тексту */
-    transition: color 0.3s ease;
-  }
- 
-.header-content a.active {
-    color: #9747FF;
-  }
+.header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+}
 
-  .header-content a:hover {
-    color: #b47cff;
-  }
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-content nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-content a {
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.header-content a:hover {
+  color: #b47cff;
+}
 
 .header-content a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;               /* можно -3px, если хочешь чуть ниже */
-    width: 0;
-    height: 2px;
-    background-color: #b47cff;
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #b47cff;
+  transition: width 0.3s ease;
+}
+
+.header-content a:hover::after {
+  width: 100%;
+}
+
+.header-content a.active,
+.header-content a.nav-link--active {
+  color: #9747ff;
+}
+
+/* =========================
+   Shared Logo
+========================= */
+
+.hero-logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero .hero-logo {
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0% {
+    transform: translateY(0);
   }
-  
-  .header-content a:hover::after {
-    width: 100%;
+  50% {
+    transform: translateY(-6px);
   }
-  
+  100% {
+    transform: translateY(0);
+  }
+}
 
 /* =========================
    Hero
@@ -147,31 +183,18 @@ p {
   text-align: center;
 }
 
-.hero-logo {
-    display: block;
-    width: 120px; /* можешь менять */
-    height: auto;
-    object-fit: contain;
-    animation: logoFloat 4s ease-in-out infinite;
-  }
-
-  @keyframes logoFloat {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
-    100% { transform: translateY(0); }
-  }
-
 .hero-content {
   max-width: 920px;
 }
 
 .hero-intro {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: 24px;
   margin-bottom: 32px;
 }
 
 .hero-description {
-  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+  font-size: 20px;
+  line-height: 1.6;
   color: #333;
 }
 
@@ -192,18 +215,16 @@ p {
 }
 
 .hero-links a {
-    color: #4D6D89;
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: 500;
-  }
+  color: #4d6d89;
+  font-weight: 500;
+}
 
-  .hero-links a:hover {
-    color: #9747FF; 
-  }
+.hero-links a:hover {
+  color: #9747ff;
+}
 
 /* =========================
-   Case Study
+   Home Case Studies
 ========================= */
 
 .case-study {
@@ -224,15 +245,15 @@ p {
 }
 
 .case-study__title {
-  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  font-size: 32px;
   font-weight: 500;
   line-height: 1.25;
 }
 
 .case-study__text {
-  font-size: clamp(1.0625rem, 1.5vw, 1.375rem);
-  color: #222;
+  font-size: 18px;
   line-height: 1.6;
+  color: #222;
 }
 
 .case-study__media {
@@ -255,19 +276,25 @@ p {
    Tags
 ========================= */
 
-.tag-list {
+.tag-list,
+.case-tags,
+.case-tools {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
 }
 
-.tag {
+.tag,
+.case-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 14px 20px;
   border: 1px solid #4d6d89;
   border-radius: 10px;
   background: #fff;
   color: #4d6d89;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -289,10 +316,10 @@ p {
   justify-content: center;
   min-height: 52px;
   padding: 14px 24px;
+  border-radius: 10px;
   background: #4d6d89;
   color: #fff;
-  border-radius: 10px;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   transition: 0.2s ease;
@@ -301,7 +328,7 @@ p {
 .btn:hover {
   transform: translateY(-1px);
   opacity: 0.95;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
 }
 
 .btn--large {
@@ -325,67 +352,64 @@ p {
 .reference-card {
   border-radius: 12px;
   padding: 28px 24px;
+  transition: 0.2s ease;
 }
 
 .card {
+  min-height: 260px;
   background: #faf9ff;
   border: 1px solid #e4e0f9;
-  min-height: 260px;
-  text-align: center; 
+  text-align: center;
 }
 
 .reference-card {
+  min-height: 260px;
   background: #fffdfc;
   border: 1px solid #ececec;
-  min-height: 260px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.card__title,
-.reference-card__title {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-  font-weight: 500;
-  line-height: 1.3;
+.card:hover,
+.process-card:hover,
+.reference-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
 }
 
-.card__text,
-.reference-card__text {
-  font-size: 1.0625rem;
-  color: #222;
-  line-height: 1.6;
-}
-
-.reference-card__link {
-  margin-top: auto;
-  font-size: 1rem;
+.card__icon-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .card__icon {
   width: 52px;
   height: 52px;
-  margin-bottom: 18px;
   object-fit: contain;
-  
-  }
+}
 
-  .card:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.05);
-  }
+.card__title,
+.reference-card__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
 
-  .reference-card:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.05);
-  }
-  .card__icon-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
+.card__text,
+.reference-card__text {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.reference-card__link {
+  margin-top: auto;
+  font-size: 16px;
+}
 
 /* =========================
    CTA
@@ -408,15 +432,15 @@ p {
 }
 
 .cta-title {
-  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  font-size: 32px;
   font-weight: 400;
   margin-bottom: 24px;
 }
 
 .cta-text {
-  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
-  color: #222;
+  font-size: 20px;
   line-height: 1.6;
+  color: #222;
 }
 
 /* =========================
@@ -424,9 +448,9 @@ p {
 ========================= */
 
 .site-footer {
+  background: #fff;
   border-top: 1px solid #ececec;
   padding: 48px 0;
-  background: #fff;
 }
 
 .footer-container {
@@ -435,18 +459,15 @@ p {
   justify-content: space-between;
   gap: 32px;
 }
+
 .footer-links a {
-    color: #000;
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: 500;
-  }
+  color: #000;
+  font-weight: 500;
+}
 
-  footer a:hover {
-    color: #9747FF; 
-  }
-
-
+.footer-links a:hover {
+  color: #9747ff;
+}
 
 /* =========================
    Case Study Page
@@ -463,28 +484,43 @@ p {
   gap: 48px;
 }
 
-.case-hero__title {
-  max-width: 980px;
-  text-align: center;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 48px;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-.case-hero__banner {
-  width: 100%;
-  min-height: 420px;
-  background: #ffcb7e;
-  border-radius: 20px;
-}
-
-.case-hero__image {
+/* .case-hero__image {
   width: 100%;
   max-width: 1200px;
   border-radius: 20px;
-  display: block;
-}
+} */
+
+.case-hero__scroll {
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;            /* высота окна */
+    overflow-y: auto;         /* вертикальный скролл */
+    border-radius: 20px;
+    border: 1px solid #ececec;
+    background: #fff;
+  }
+  
+  .case-hero__scroll img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .case-image-scroll {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;          /* высота окна */
+    overflow-y: auto;
+    border-radius: 16px;
+    border: 1px solid #ececec;
+    background: #fff;
+  }
+  
+  .case-image-scroll img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
 .case-section-title {
   font-family: "Josefin Sans", sans-serif;
@@ -505,28 +541,6 @@ p {
   font-size: 20px;
   line-height: 1.6;
   color: #333;
-}
-
-.case-tags,
-.case-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.case-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 20px;
-  border: 1px solid #4d6d89;
-  border-radius: 10px;
-  background: #fff;
-  color: #4d6d89;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
 }
 
 .case-split {
@@ -554,7 +568,6 @@ p {
   width: 100%;
   max-width: 680px;
   border-radius: 20px;
-  display: block;
 }
 
 .case-text {
@@ -565,7 +578,6 @@ p {
 }
 
 .case-text p {
-  margin: 0;
   font-size: 18px;
   line-height: 1.7;
   color: #222;
@@ -590,8 +602,9 @@ p {
 }
 
 .process-card--center {
-  grid-column: 2 / span 2;
-}
+    grid-column: 2 / 4;
+    justify-self: center;
+  }
 
 .process-card__number {
   width: 92px;
@@ -639,7 +652,6 @@ p {
 }
 
 .case-feature-list {
-  margin: 0;
   padding-left: 22px;
   display: grid;
   gap: 12px;
@@ -668,7 +680,6 @@ p {
   text-align: center;
 }
 
-
 /* =========================
    Responsive
 ========================= */
@@ -679,8 +690,18 @@ p {
   }
 
   .case-study,
-  .case-study--reverse {
+  .case-study--reverse,
+  .case-split,
+  .case-split--reverse {
     grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-card--center {
+    grid-column: auto;
   }
 }
 
@@ -689,16 +710,20 @@ p {
     padding: 72px 0;
   }
 
-  .header-container,
+  .header-content,
   .hero-footer,
   .footer-container {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .main-nav {
-    gap: 20px;
+  .header-content {
+    padding: 20px;
+  }
+
+  .header-content nav {
     flex-wrap: wrap;
+    gap: 20px;
   }
 
   .hero-container,
@@ -706,12 +731,39 @@ p {
     gap: 40px;
   }
 
-  .cards-grid--4 {
+  .cards-grid--4,
+  .process-grid,
+  .learning-grid {
     grid-template-columns: 1fr;
   }
 
-  .section-subtitle {
-    font-size: 1rem;
+  .section-title,
+  .case-section-title {
+    font-size: 32px;
+  }
+
+  .section-subtitle,
+  .case-section-subtitle,
+  .case-summary-text,
+  .case-text p,
+  .case-feature-list li,
+  .learning-card {
+    font-size: 16px;
+  }
+
+  .hero-intro {
+    font-size: 22px;
+  }
+
+  .hero-description,
+  .cta-text {
+    font-size: 18px;
+  }
+
+  .tag,
+  .case-tag {
+    font-size: 14px;
+    padding: 12px 16px;
   }
 
   .tag-list,
@@ -722,58 +774,14 @@ p {
   .btn {
     width: 100%;
   }
-}
 
-/* case stadies */
-@media (max-width: 1100px) {
-    .case-split,
-    .case-split--reverse {
-      grid-template-columns: 1fr;
-    }
-  
-    .process-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .process-card--center {
-      grid-column: auto;
-    }
+  .process-card__title {
+    font-size: 20px;
   }
-@media (max-width: 768px) {
-    .case-hero__title,
-    .case-section-title {
-      font-size: 32px;
-    }
-  
-    .case-section-subtitle,
-    .case-summary-text,
-    .case-text p,
-    .case-feature-list li,
-    .learning-card {
-      font-size: 16px;
-    }
-  
-    .process-grid,
-    .learning-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .case-hero__banner {
-      min-height: 220px;
-    }
-  
-    .case-tag {
-      font-size: 14px;
-      padding: 12px 16px;
-    }
-  
-    .process-card__title {
-      font-size: 20px;
-    }
-  
-    .process-card__number {
-      width: 78px;
-      height: 78px;
-      font-size: 32px;
-    }
+
+  .process-card__number {
+    width: 78px;
+    height: 78px;
+    font-size: 32px;
   }
+}
