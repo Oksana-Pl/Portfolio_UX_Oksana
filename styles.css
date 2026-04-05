@@ -318,7 +318,9 @@ ul {
   min-height: 52px;
   padding: 14px 24px;
   border-radius: 10px;
-  background: #4d6d89;
+  /* background: #4d6d89; 
+  color: #fff;  */
+  background: #6759b2;
   color: #fff;
   font-size: 16px;
   font-weight: 600;
