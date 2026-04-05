@@ -92,14 +92,14 @@ ul {
 }
 
 .header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 32px;
-}
+    width: min(100% - 40px, 1320px);
+    margin-inline: auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
 
 .header-content nav {
   display: flex;
@@ -342,6 +342,7 @@ ul {
 .cards-grid {
   display: grid;
   gap: 24px;
+  justify-items: center;
 }
 
 .cards-grid--4 {
@@ -360,6 +361,7 @@ ul {
   background: #faf9ff;
   border: 1px solid #e4e0f9;
   text-align: center;
+  
 }
 
 .reference-card {
