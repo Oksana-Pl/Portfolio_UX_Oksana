@@ -352,9 +352,9 @@ text-transform: uppercase;
   justify-items: center;
 }
 
-.cards-grid--4 {
+/* .cards-grid--4 {
   grid-template-columns: repeat(4, 1fr);
-}
+} */
 
 .card,
 .reference-card {
