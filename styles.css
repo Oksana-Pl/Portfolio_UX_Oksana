@@ -348,6 +348,7 @@ text-transform: uppercase;
 
 .cards-grid {
   display: flex;
+  flex-direction: row;
   gap: 24px;
   justify-items: center;
 
