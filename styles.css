@@ -347,11 +347,17 @@ text-transform: uppercase;
 ========================= */
 
 .cards-grid {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   gap: 24px;
   justify-items: center;
+  
+}
 
+.cartd-ref {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cards-grid--4 {
