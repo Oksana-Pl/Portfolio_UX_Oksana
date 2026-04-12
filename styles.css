@@ -1003,4 +1003,8 @@ text-transform: uppercase;
     height: 78px;
     font-size: 32px;
   }
+
+  .case-image-scroll {
+    height: 300px;
+  }
 }
