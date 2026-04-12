@@ -1008,6 +1008,9 @@ text-transform: uppercase;
     height: 250px;
   }
   .case-hero__scroll {
-    min-height: 300px;
+    height: 300px;
   }
+  /* .case-hero__scroll img {
+    min-height: 300px;
+  } */
 }
