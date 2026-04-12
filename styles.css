@@ -330,6 +330,7 @@ text-transform: uppercase;
   font-weight: 600;
   text-transform: uppercase;
   transition: 0.2s ease;
+  /* min-width: 200px; */
 }
 
 .btn:hover {
@@ -340,6 +341,11 @@ text-transform: uppercase;
 
 .btn--large {
   min-width: 220px;
+}
+.btn--secondary {
+  border: 1px solid #6759b2;
+  background-color: #fff;
+  color: #6759b2;
 }
 
 /* =========================
