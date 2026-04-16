@@ -1032,5 +1032,8 @@ text-transform: uppercase;
   .case-hero__scroll {
     height: 300px;
   }
+  .arrow {
+    display: none;
+  }
   
 }
