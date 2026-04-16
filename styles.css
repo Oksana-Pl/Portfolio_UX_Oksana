@@ -156,6 +156,12 @@ ul {
 .hero .hero-logo {
   animation: logoFloat 4s ease-in-out infinite;
 }
+.hero-image {
+  display: block;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
 
 @keyframes logoFloat {
   0% {
