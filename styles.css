@@ -204,7 +204,7 @@ ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-end;
   gap: 32px;
   padding-top: 16px;
 }
@@ -212,7 +212,7 @@ ul {
 .hero-links,
 .footer-links {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   gap: 14px;
 }
 
@@ -225,10 +225,14 @@ ul {
   color: #9747ff;
 }
 
-.linkedIn__icon {
-  width: 24px;
-  height: 24px;
- 
+.contacts__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.contacts__icon_wrapper{
+  display: flex;
+  gap: 10px;
 }
 
 
