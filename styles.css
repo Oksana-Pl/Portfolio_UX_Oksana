@@ -212,7 +212,7 @@ ul {
 .hero-links,
 .footer-links {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 14px;
 }
 
@@ -223,6 +223,12 @@ ul {
 
 .hero-links a:hover {
   color: #9747ff;
+}
+
+.linkedIn__icon {
+  width: 24px;
+  height: 24px;
+ 
 }
 
 
