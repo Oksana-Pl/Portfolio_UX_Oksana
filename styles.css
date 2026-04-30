@@ -142,6 +142,12 @@ ul {
   color: #9747ff;
 }
 
+.header span{
+  color: #4d6d89; 
+  font-weight:300;
+}
+
+
 /* =========================
    Shared Logo
 ========================= */
