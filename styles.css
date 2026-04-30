@@ -962,6 +962,7 @@ text-transform: uppercase;
   .process-card--center {
     grid-column: auto;
   }
+ 
 }
 
 @media (max-width: 768px) {
@@ -1052,6 +1053,14 @@ text-transform: uppercase;
   }
   .arrow {
     display: none;
+  }
+  .education {
+    flex-direction: column;
+    align-items: center; /* чтобы карточки были по центру */
+  }
+  .education-card {
+    width: 100%;
+    max-width: 100%;
   }
   
 }
