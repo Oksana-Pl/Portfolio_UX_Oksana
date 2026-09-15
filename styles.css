@@ -1072,3 +1072,23 @@ text-transform: uppercase;
   }
   
 }
+/* Scroll reveals matching Portfolio_Oksana. Content stays visible without JS. */
+.reveal-word { opacity: 0; transition: opacity .6s ease; }
+.text-visible .reveal-word { opacity: 1; }
+.reveal-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s ease var(--reveal-delay, 0s), transform .7s cubic-bezier(.22,1,.36,1) var(--reveal-delay, 0s), box-shadow .2s ease;
+}
+.reveal-card.is-visible { opacity: 1; transform: none; }
+.card.reveal-card.is-visible:hover,
+.process-card.reveal-card.is-visible:hover,
+.reference-card.reveal-card.is-visible:hover { transform: translateY(-1px); }
+.reveal-card:focus-within { opacity: 1; transform: none; transition: none; }
+@media (max-width: 576px) {
+  .reveal-card { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-word, .reveal-card { opacity: 1; transform: none; transition: none; }
+  .hero .hero-logo { animation: none; }
+}
