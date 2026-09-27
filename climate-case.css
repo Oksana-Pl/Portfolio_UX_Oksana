@@ -1,0 +1,22 @@
+/* Climate Finance uses the existing portfolio layout and components. */
+.climate-figure { width: 100%; margin: 0; }
+.climate-figure img { display: block; }
+.climate-figure figcaption { margin-top: 14px; color: #555; font-size: 16px; line-height: 1.5; }
+.climate-gallery { display: grid; gap: 32px; width: 100%; }
+.climate-gallery .case-image-scroll { max-width: 390px; margin: 0 auto; }
+.climate-testing-text { max-width: 980px; margin: 40px auto 0; }
+.climate-flow { width: 100%; padding: 32px; border: 1px solid #ececec; border-radius: 20px; }
+.climate-flow h3 { font-size: 26px; line-height: 1.3; }
+.climate-flow p { font-size: 18px; line-height: 1.6; }
+.climate-preview__mobile { width: 42%; max-height: 280px; overflow-y: hidden; margin-left: auto; border: 1px solid #ececec; border-radius: 16px; }
+.climate-preview__mobile img { display: block; border-radius: 0; }
+.climate-case .btn { text-align: center; }
+.climate-case a:focus-visible, .climate-case [tabindex]:focus-visible, .climate-skip-link:focus-visible { outline: 3px solid #372775; outline-offset: 5px; }
+.climate-skip-link { position: absolute; top: 8px; left: 16px; z-index: 1000; padding: 12px 20px; background: #fff; color: #372775; transform: translateY(-160%); }
+.climate-skip-link:focus { transform: translateY(0); }
+@media (max-width: 600px) {
+  .climate-flow { padding: 24px; }
+  .climate-preview__mobile { max-height: 220px; }
+}
+
+.climate-case .case-hero__scroll { height: auto; max-height: 600px; }
