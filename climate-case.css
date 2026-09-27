@@ -19,4 +19,19 @@
   .climate-preview__mobile { max-height: 220px; }
 }
 
-.climate-case .case-hero__scroll { height: auto; max-height: 600px; }
+
+
+/* Hero video and compact case-study spacing. */
+.climate-case .case-hero video {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+}
+.climate-case .case-results .case-section-subtitle {
+  max-width: 800px;
+}
+.climate-case .case-process .card {
+  min-height: 0;
+  align-self: start;
+}

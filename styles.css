@@ -50,7 +50,7 @@ ul {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 90px 0;
 }
 
 .section--tight {
@@ -975,7 +975,7 @@ text-transform: uppercase;
 
 @media (max-width: 768px) {
   .section {
-    padding: 72px 0;
+    padding: 62px 0;
   }
 
   .header-content,
