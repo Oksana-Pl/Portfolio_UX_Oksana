@@ -274,6 +274,14 @@ ul {
   font-weight: 500;
   line-height: 1.25;
   font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+.case-study-subtitle{
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.25;
+  font-family: "Josefin Sans", sans-serif;
+  
 }
 
 .case-study__text {
