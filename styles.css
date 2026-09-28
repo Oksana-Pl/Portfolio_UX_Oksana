@@ -316,9 +316,9 @@ ul {
   align-items: center;
   justify-content: center;
   padding: 10px 15px;
-  /* border: 1px solid #4d6d89; */
+  border: 1px solid #4d6d89;
   border-radius: 10px;
-  /* background: #fff; */
+  background: #fff;
   color: #4d6d89;
   font-size: 18px;
   font-weight: 500;
