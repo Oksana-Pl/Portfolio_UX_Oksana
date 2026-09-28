@@ -33,5 +33,5 @@
 }
 .climate-case .case-process .card {
   min-height: 0;
-  align-self: start;
+  align-self: stretch;
 }
