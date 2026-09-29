@@ -74,15 +74,6 @@ ul {
   text-transform: uppercase;
 }
 
-.section-subtitle {
-  max-width: 900px;
-  margin: -12px auto 48px;
-  text-align: center;
-  font-size: 20px;
-  line-height: 1.6;
-  color: #333;
-}
-
 /* =========================
    Header
 ========================= */
@@ -136,9 +127,7 @@ ul {
 .header-content a:hover::after {
   width: 100%;
 }
-
-.header-content a.active,
-.header-content a.nav-link--active {
+.header-content a.active {
   color: #9747ff;
 }
 
@@ -146,7 +135,6 @@ ul {
   color: #7c6e9f; 
   font-weight:300;
 }
-
 
 /* =========================
    Shared Logo
@@ -161,12 +149,6 @@ ul {
 
 .hero .hero-logo {
   animation: logoFloat 4s ease-in-out infinite;
-}
-.hero-image {
-  display: block;
-  width: 300px;
-  height: auto;
-  object-fit: contain;
 }
 
 @keyframes logoFloat {
@@ -247,7 +229,6 @@ ul {
   gap: 10px;
 }
 
-
 /* =========================
    Home Case Studies
 ========================= */
@@ -305,20 +286,15 @@ ul {
 .case-study__image--small {
   max-width: 100%;
 }
-
 /* =========================
    Tags
 ========================= */
-
-.tag-list,
 .case-tags,
 .case-tools {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
 }
-
-.tag,
 .case-tag {
   display: inline-flex;
   align-items: center;
@@ -460,11 +436,6 @@ text-transform: uppercase;
   color: #222;
 }
 
-.reference-card__link {
-  margin-top: auto;
-  font-size: 16px;
-}
-
 .education {
   display: flex;
   gap: 20px;
@@ -561,11 +532,6 @@ text-transform: uppercase;
   outline-offset: 5px;
 }
 
-.card--compact {
-  min-height: 0;
-  align-self: stretch;
-}
-
 .case-page {
   background: #fff;
 }
@@ -576,7 +542,6 @@ text-transform: uppercase;
   align-items: center;
   gap: 48px;
 }
-
 
 .case-hero__scroll {
     width: 100%;
@@ -630,15 +595,6 @@ text-transform: uppercase;
   font-size: 20px;
   line-height: 1.6;
   color: #333;
-}
-
-.case-section-subtitle--narrow {
-  max-width: 800px;
-}
-
-.case-text.case-text--summary {
-  max-width: 980px;
-  margin: 40px auto 0;
 }
 
 .case-split {
@@ -752,6 +708,10 @@ text-transform: uppercase;
   color: #333;
 }
 
+.case-project-links {
+  padding-bottom: 90px;
+}
+
 .case-actions {
   margin-top: 40px;
   display: flex;
@@ -826,101 +786,7 @@ text-transform: uppercase;
     margin-bottom: 24px;
     position: relative;
   }
-  
-  /* Foundations icon */
-  .ds-card__icon--foundations::before,
-  .ds-card__icon--foundations::after {
-    content: "";
-    position: absolute;
-    background: #4d6d89;
-    border-radius: 4px;
-  }
-  
-  .ds-card__icon--foundations::before {
-    width: 84px;
-    height: 18px;
-    top: 8px;
-    left: 0;
-  }
-  
-  .ds-card__icon--foundations::after {
-    width: 18px;
-    height: 56px;
-    left: 33px;
-    bottom: 0;
-  }
-  
-  /* Components icon */
-  .ds-card__icon--components {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-  
-  .ds-card__icon--components::before,
-  .ds-card__icon--components::after {
-    content: "";
-  }
-  
-  .ds-card__icon--components > span {
-    display: none;
-  }
-  
-  .ds-card__icon--components {
-    background:
-      linear-gradient(#4d6d89 0 0) top left / 37px 37px no-repeat,
-      linear-gradient(#4d6d89 0 0) top right / 37px 37px no-repeat,
-      linear-gradient(#4d6d89 0 0) bottom left / 37px 37px no-repeat,
-      linear-gradient(#4d6d89 0 0) bottom right / 37px 37px no-repeat;
-  }
-  
-  /* Documentation icon */
-  .ds-card__icon--docs::before,
-  .ds-card__icon--docs::after {
-    content: "";
-    position: absolute;
-    background: #4d6d89;
-    border-radius: 4px;
-  }
-  
-  .ds-card__icon--docs::before {
-    width: 30px;
-    height: 68px;
-    left: 8px;
-    bottom: 0;
-  }
-  
-  .ds-card__icon--docs::after {
-    width: 42px;
-    height: 84px;
-    right: 8px;
-    bottom: 0;
-  }
-  
-  /* Playground icon */
-  .ds-card__icon--playground::before,
-  .ds-card__icon--playground::after {
-    content: "";
-    position: absolute;
-    background: #4d6d89;
-    border-radius: 50%;
-  }
-  
-  .ds-card__icon--playground::before {
-    width: 32px;
-    height: 32px;
-    top: 0;
-    left: 26px;
-  }
-  
-  .ds-card__icon--playground::after {
-    width: 60px;
-    height: 60px;
-    bottom: 0;
-    left: 12px;
-  }
-  
-  .result-card {
+.result-card {
     width: 100%;
     min-height: 260px;
     display: flex;
@@ -1018,6 +884,10 @@ text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
+  .case-project-links {
+    padding-bottom: 62px;
+  }
+
   .section {
     padding: 62px 0;
   }
@@ -1054,7 +924,6 @@ text-transform: uppercase;
     font-size: 32px;
   }
 
-  .section-subtitle,
   .case-section-subtitle,
   .case-summary-text,
   .case-text p,
@@ -1072,13 +941,11 @@ text-transform: uppercase;
     font-size: 18px;
   }
 
-  .tag,
   .case-tag {
     font-size: 14px;
     padding: 12px 16px;
   }
 
-  .tag-list,
   .button-group {
     gap: 12px;
   }
