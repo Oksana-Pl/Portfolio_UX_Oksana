@@ -1,5 +1,16 @@
 (() => {
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  const videos = document.querySelectorAll('video');
+  function pauseMotionVideos() {
+    videos.forEach(video => {
+      video.autoplay = false;
+      video.pause();
+    });
+  }
+  if (motion.matches) pauseMotionVideos();
+  motion.addEventListener('change', event => {
+    if (event.matches) pauseMotionVideos();
+  });
   if (motion.matches || !('IntersectionObserver' in window)) return;
 
   const cardSelector = '.card, .education-card, .reference-card, .process-card, .learning-card, .case-study__media, .case-split__media, .case-hero__scroll';

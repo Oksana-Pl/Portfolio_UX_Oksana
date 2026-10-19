@@ -1,3 +1,22 @@
+/* Shared design tokens: original visual values are preserved. */
+:root {
+  --color-text: #000;
+  --color-white: #fff;
+  --color-surface: #fffdfc;
+  --color-border: #ececec;
+  --color-accent: #6759b2;
+  --color-link: #4d6d89;
+  --color-focus: #372775;
+  --color-text-secondary: #333;
+  --color-text-strong: #222;
+  --color-highlight: #9747ff;
+  --color-highlight-hover: #b47cff;
+  --color-muted-purple: #7c6e9f;
+  --font-main: Inter, sans-serif;
+  --font-heading: "Josefin Sans", sans-serif;
+  --container-width: 1320px;
+}
+
 /* =========================
    Base
 ========================= */
@@ -14,9 +33,9 @@ html {
 
 body {
   margin: 0;
-  font-family: Inter, sans-serif;
-  color: #000;
-  background: #fff;
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: var(--color-white);
   line-height: 1.5;
 }
 
@@ -45,7 +64,7 @@ ul {
 ========================= */
 
 .container {
-  width: min(100% - 40px, 1320px);
+  width: min(100% - 40px, var(--container-width));
   margin-inline: auto;
 }
 
@@ -58,14 +77,14 @@ ul {
 }
 
 .section--alt {
-  background: #FFFDFC;
+  background: var(--color-surface);
   border-radius: 20px;
   margin-bottom: 60px;
-  border: 1px solid #ECECEC;
+  border: 1px solid var(--color-border);
 }
 
 .section-title {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font-heading);
   font-size: 40px;
   font-weight: 500;
   line-height: 1.2;
@@ -80,12 +99,12 @@ ul {
 
 .header {
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #ececec;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .header-content {
-    width: min(100% - 40px, 1320px);
+    width: min(100% - 40px, var(--container-width));
     margin-inline: auto;
     padding: 20px 0;
     display: flex;
@@ -100,8 +119,13 @@ ul {
   gap: 30px;
 }
 
+.header-brand {
+  font-size: 1.17em;
+  font-weight: 500;
+}
+
 .header-content a {
-  color: #000;
+  color: var(--color-text);
   font-weight: 500;
   position: relative;
   display: inline-block;
@@ -110,7 +134,7 @@ ul {
 }
 
 .header-content a:hover {
-  color: #b47cff;
+  color: var(--color-accent);
 }
 
 .header-content a::after {
@@ -120,7 +144,7 @@ ul {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #b47cff;
+  background-color: var(--color-highlight-hover);
   transition: width 0.3s ease;
 }
 
@@ -128,11 +152,11 @@ ul {
   width: 100%;
 }
 .header-content a.active {
-  color: #9747ff;
+  color: var(--color-highlight);
 }
 
 .header span{
-  color: #7c6e9f; 
+  color: var(--color-muted-purple);
   font-weight:300;
 }
 
@@ -148,7 +172,7 @@ ul {
 }
 
 .hero .hero-logo {
-  animation: logoFloat 4s ease-in-out infinite;
+  animation: logoFloat 4s ease-in-out;
 }
 
 @keyframes logoFloat {
@@ -168,7 +192,7 @@ ul {
 ========================= */
 
 .hero {
-  background: #fffdfc;
+  background: var(--color-surface);
 }
 
 .hero-container {
@@ -184,6 +208,7 @@ ul {
 }
 
 .hero-intro {
+  font-weight: 400;
   font-size: 24px;
   margin-bottom: 32px;
 }
@@ -191,13 +216,12 @@ ul {
 .hero-description {
   font-size: 20px;
   line-height: 1.6;
-  color: #333;
+  color: var(--color-text-secondary);
 }
 
 .hero-footer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   justify-content: flex-end;
   gap: 32px;
   padding-top: 16px;
@@ -211,12 +235,12 @@ ul {
 }
 
 .hero-links a {
-  color: #4d6d89;
+  color: var(--color-link);
   font-weight: 500;
 }
 
 .hero-links a:hover {
-  color: #9747ff;
+  color: var(--color-accent);
 }
 
 .contacts__icon {
@@ -254,21 +278,21 @@ ul {
   font-size: 32px;
   font-weight: 500;
   line-height: 1.25;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font-heading);
   text-transform: uppercase;
 }
 .case-study-subtitle{
   font-size: 28px;
   font-weight: 400;
   line-height: 1.25;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font-heading);
   
 }
 
 .case-study__text {
   font-size: 18px;
   line-height: 1.6;
-  color: #222;
+  color: var(--color-text-strong);
 }
 
 .case-study__media {
@@ -300,15 +324,15 @@ ul {
   align-items: center;
   justify-content: center;
   padding: 10px 15px;
-  border: 1px solid #4d6d89;
+  border: 1px solid var(--color-link);
   border-radius: 10px;
-  background: #fff;
-  color: #4d6d89;
+  background: var(--color-white);
+  color: var(--color-link);
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font-heading);
 }
 
 /* =========================
@@ -322,7 +346,7 @@ ul {
 }
 
 .btn {
-font-family: "Josefin Sans", sans-serif;
+font-family: var(--font-heading);
 text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -330,8 +354,8 @@ text-transform: uppercase;
   min-height: 52px;
   padding: 14px 24px;
   border-radius: 10px;
-  background: #6759b2;
-  color: #fff;
+  background: var(--color-accent);
+  color: var(--color-white);
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
@@ -349,9 +373,9 @@ text-transform: uppercase;
   min-width: 220px;
 }
 .btn--secondary {
-  border: 1px solid #6759b2;
-  background-color: #fff;
-  color: #6759b2;
+  border: 1px solid var(--color-accent);
+  background-color: var(--color-white);
+  color: var(--color-accent);
 }
 
 /* =========================
@@ -393,8 +417,8 @@ text-transform: uppercase;
 
 .reference-card {
   min-height: 260px;
-  background: #fffdfc;
-  border: 1px solid #ececec;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -422,7 +446,7 @@ text-transform: uppercase;
 
 .card__title,
 .reference-card__title {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font-heading);
   font-size: 24px;
   font-weight: 500;
   line-height: 1.3;
@@ -433,7 +457,7 @@ text-transform: uppercase;
 .reference-card__text {
   font-size: 17px;
   line-height: 1.6;
-  color: #222;
+  color: var(--color-text-strong);
 }
 
 .education {
@@ -453,7 +477,7 @@ text-transform: uppercase;
 ========================= */
 
 .cta {
-  background: #fffdfc;
+  background: var(--color-surface);
 }
 
 .cta-container {
@@ -477,7 +501,7 @@ text-transform: uppercase;
 .cta-text {
   font-size: 20px;
   line-height: 1.6;
-  color: #222;
+  color: var(--color-text-strong);
 }
 
 /* =========================
@@ -485,8 +509,8 @@ text-transform: uppercase;
 ========================= */
 
 .site-footer {
-  background: #fff;
-  border-top: 1px solid #ececec;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-border);
   padding: 48px 0;
 }
 
@@ -498,12 +522,12 @@ text-transform: uppercase;
 }
 
 .footer-links a {
-  color: #000;
+  color: var(--color-text);
   font-weight: 500;
 }
 
 .footer-links a:hover {
-  color: #9747ff;
+  color: var(--color-highlight);
 }
 
 /* =========================
@@ -526,14 +550,15 @@ text-transform: uppercase;
   text-align: center;
 }
 
-.case-page a:focus-visible,
-.case-page [tabindex]:focus-visible {
-  outline: 3px solid #372775;
+a:focus-visible,
+button:focus-visible,
+[tabindex="0"]:focus-visible {
+  outline: 3px solid var(--color-focus);
   outline-offset: 5px;
 }
 
 .case-page {
-  background: #fff;
+  background: var(--color-white);
 }
 
 .case-hero__container {
@@ -549,8 +574,8 @@ text-transform: uppercase;
     height: 600px;            /* высота окна */
     overflow-y: auto;         /* вертикальный скролл */
     border-radius: 20px;
-    border: 1px solid #ececec;
-    background: #fff;
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
   }
   
   .case-hero__scroll img {
@@ -565,8 +590,8 @@ text-transform: uppercase;
     height: 400px;          /* высота окна */
     overflow-y: auto;
     border-radius: 16px;
-    border: 1px solid #ececec;
-    background: #fff;
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
   }
   
   .case-image-scroll img {
@@ -576,7 +601,7 @@ text-transform: uppercase;
   }
 
 .case-section-title {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font-heading);
   font-size: 42px;
   font-weight: 500;
   line-height: 1.2;
@@ -594,7 +619,7 @@ text-transform: uppercase;
   text-align: center;
   font-size: 20px;
   line-height: 1.6;
-  color: #333;
+  color: var(--color-text-secondary);
 }
 
 .case-split {
@@ -634,7 +659,7 @@ text-transform: uppercase;
 .case-text p {
   font-size: 18px;
   line-height: 1.7;
-  color: #222;
+  color: var(--color-text-strong);
 }
 
 .process-grid {
@@ -674,12 +699,12 @@ text-transform: uppercase;
 .process-card__number {
   width: 92px;
   height: 92px;
-  border: 1px solid #4d6d89;
+  border: 1px solid var(--color-link);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #4d6d89;
+  color: var(--color-link);
   font-size: 40px;
   font-weight: 500;
   margin-bottom: 24px;
@@ -690,7 +715,7 @@ text-transform: uppercase;
   font-weight: 500;
   line-height: 1.3;
   margin-bottom: 14px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font-heading);
 }
 
 .process-card__text {
@@ -705,7 +730,7 @@ text-transform: uppercase;
   text-align: center;
   font-size: 18px;
   line-height: 1.7;
-  color: #333;
+  color: var(--color-text-secondary);
 }
 
 .case-project-links {
@@ -730,7 +755,7 @@ text-transform: uppercase;
 .case-feature-list li {
   font-size: 18px;
   line-height: 1.6;
-  color: #222;
+  color: var(--color-text-strong);
 }
 
 .learning-grid {
@@ -741,10 +766,10 @@ text-transform: uppercase;
 
 .learning-card {
   padding: 18px 22px;
-  border: 1px solid #4d6d89;
+  border: 1px solid var(--color-link);
   border-radius: 12px;
-  background: #fff;
-  color: #4d6d89;
+  background: var(--color-white);
+  color: var(--color-link);
   font-size: 18px;
   line-height: 1.6;
   text-align: center;
@@ -763,7 +788,7 @@ text-transform: uppercase;
   ========================= */
   
   .ds-hero {
-    background: #fffdfc;
+    background: var(--color-surface);
   }
   
   .ds-structure-grid {
@@ -799,7 +824,7 @@ text-transform: uppercase;
   .result-card__circle {
     width: 90px;
     height: 90px;
-    border: 4px solid #4d6d89;
+    border: 4px solid var(--color-link);
     border-radius: 50%;
     position: relative;
   }
@@ -812,13 +837,13 @@ text-transform: uppercase;
     transform: translate(-50%, -52%);
     font-size: 52px;
     font-weight: 600;
-    color: #4d6d89;
+    color: var(--color-link);
     line-height: 1;
   }
   
   .result-card__title {
     margin-bottom: 0;
-    color: #4d6d89;
+    color: var(--color-link);
     /* text-transform: uppercase; */
     text-align: center;
   }
@@ -1000,6 +1025,33 @@ text-transform: uppercase;
   .reveal-card { transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   .reveal-word, .reveal-card { opacity: 1; transform: none; transition: none; }
   .hero .hero-logo { animation: none; }
+}
+
+/* Accessible navigation helpers; visible only during keyboard interaction. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1000;
+  padding: 12px 20px;
+  background: var(--color-white);
+  color: var(--color-focus);
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: translateY(0);
 }

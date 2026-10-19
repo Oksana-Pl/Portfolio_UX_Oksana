@@ -1,0 +1,5 @@
+# GitHub project Pages: crawlers use /robots.txt at the host root,
+# not this repository subdirectory. This file is a deployment template.
+User-agent: *
+Allow: /
+Sitemap: https://oksana-pl.github.io/Portfolio_UX_Oksana/sitemap.xml

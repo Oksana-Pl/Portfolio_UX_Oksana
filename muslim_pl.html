@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oksana Pleshkan Portfolio</title>
+    <title>Online Platform for Muslim Women | Oksana Pleshkan</title>
+    <meta name="description" content="UX case study of a social platform for Muslim women: user research, user flows, interface design, accessibility and an interactive Figma prototype.">
     <link rel="stylesheet" href="styles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,19 +13,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <script src="script.js" defer></script>
+
+    <link rel="canonical" href="https://oksana-pl.github.io/Portfolio_UX_Oksana/muslim_pl.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Online Platform for Muslim Women | Oksana Pleshkan">
+    <meta property="og:description" content="UX case study of a social platform for Muslim women: user research, user flows, interface design, accessibility and an interactive Figma prototype.">
+    <meta property="og:url" content="https://oksana-pl.github.io/Portfolio_UX_Oksana/muslim_pl.html">
+    <meta property="og:image" content="https://oksana-pl.github.io/Portfolio_UX_Oksana/images/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Online Platform for Muslim Women | Oksana Pleshkan">
+    <meta name="twitter:description" content="UX case study of a social platform for Muslim women: user research, user flows, interface design, accessibility and an interactive Figma prototype.">
+    <meta name="twitter:image" content="https://oksana-pl.github.io/Portfolio_UX_Oksana/images/preview.png">
+    <meta property="og:image:alt" content="UX/UI Designer Oksana Pleshkan: blue-grey lettering and a pale lavender monogram on a light background">
+    <meta name="twitter:image:alt" content="UX/UI Designer Oksana Pleshkan: blue-grey lettering and a pale lavender monogram on a light background">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://oksana-pl.github.io/Portfolio_UX_Oksana/#person",
+    "name": "Oksana Pleshkan",
+    "jobTitle": "UX/UI Designer",
+    "url": "https://oksana-pl.github.io/Portfolio_UX_Oksana/",
+    "sameAs": [
+        "https://www.behance.net/oksanapleshkan",
+        "https://www.linkedin.com/in/oksana-pleshkan-3b8a41268/"
+    ]
+}
+    </script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Header -->
     <header class="header">
         <div class="header-content">
             <a href="index.html#hero">
-            <h3 style="font-weight:500;">Oksana Pleshkan <br>
+            <p class="header-brand">Oksana Pleshkan <br>
                 <span>UX/UI Designer</span>
-            </h3>
+            </p>
             </a>
-            <nav>
+            <nav aria-label="Main navigation">
                 <a href="index.html#hero" class="nav-link ">About</a>
                 <a href="index.html#case-studies" class="active">Case Studies</a>
                 <a href="index.html#contact">Contact Me</a>
@@ -32,14 +61,14 @@
         </div>
     </header>
 
-    <main class="case-page">
+    <main class="case-page" id="main-content" tabindex="-1">
 
         <!-- Hero -->
         <section class="section case-hero">
             <div class="container case-hero__container">
                 <h1 class="section-title">Online Platform for Muslim Women</h1>
-                <div class="case-hero__scroll">
-                    <img src="images/muslim_pl.png" alt="Muslim Platform">
+                <div class="case-hero__scroll" tabindex="0" role="region" aria-label="Social platform profile mockup">
+                    <img src="images/muslim_pl.png" width="1728" height="2559" alt="Full social profile layout with a portrait and photo feed, left navigation and a right-hand contacts list.">
                 </div>
             </div>
         </section>
@@ -105,8 +134,8 @@
                 </div>
 
                 <div class="case-split__media">
-                    <div class="case-image-scroll">
-                        <img src="images/overview.png" alt="Project overview visual">
+                    <div class="case-image-scroll" tabindex="0" role="region" aria-label="Social platform news feed mockup">
+                        <img src="images/overview.png" width="1728" height="2559" alt="Social platform news feed with food and landscape photo posts, left navigation, notifications and a contacts sidebar.">
                     </div>
                 </div>
             </div>
@@ -208,7 +237,7 @@
 
                 <div class="case-actions case-actions--center">
                     <a href="https://drive.google.com/file/d/1B78cY-nqomlhFMjY21VuQ8NqEOOz5km5/view?usp=sharing"
-                        target="_blank" class="btn">View Full Case Study (PDF)</a>
+                        target="_blank" class="btn" rel="noopener noreferrer" aria-describedby="new-tab-note">View Full Case Study (PDF)</a>
                 </div>
             </div>
         </section>
@@ -228,7 +257,7 @@
                 </div>
 
                 <div class="case-split__media">
-                    <img src="images/problem.png" alt="Problem illustration" class="case-image">
+                    <img src="images/problem.png" width="566" height="352" alt="Portrait of four women wearing headscarves, shown together against a neutral background." class="case-image">
                 </div>
             </div>
         </section>
@@ -237,8 +266,8 @@
         <section class="section case-detail">
             <div class="container case-split case-split--reverse">
                 <div class="case-split__media">
-                    <div class="case-image-scroll">
-                        <img src="images/solution.png" alt="Solution illustration" class="case-image">
+                    <div class="case-image-scroll" tabindex="0" role="region" aria-label="Direct messaging mockup">
+                        <img src="images/solution.png" width="1728" height="1222" alt="Social platform messaging screen with a conversation list, a chat with purple outgoing messages and a contacts sidebar." class="case-image">
                     </div>
                 </div>
 
@@ -275,8 +304,8 @@
                 </div>
 
                 <div class="case-split__media">
-                    <div class="case-image-scroll">
-                        <img src="images/features.png" alt="Key features visual" class="case-image">
+                    <div class="case-image-scroll" tabindex="0" role="region" aria-label="Profile settings mockup">
+                        <img src="images/features.png" width="1728" height="1487" alt="Manage My Fields profile settings screen with personal-information fields, a feed preview, left navigation and a contacts sidebar." class="case-image">
                     </div>
                 </div>
             </div>
@@ -306,7 +335,7 @@
 
                 <div class="case-actions case-actions--center button-group">
                     <a href="https://www.figma.com/proto/xCIioUYWjFJmi1hpnfBLRX/muslim-platform-design?node-id=266-2265&t=c6kMhMsfET7o0JbZ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2"
-                        target="_blank" class="btn">View In Figma</a>
+                        target="_blank" class="btn" rel="noopener noreferrer" aria-describedby="new-tab-note">View In Figma</a>
                         <a href="index.html#case-studies" class="btn btn--secondary">Back to projects</a>
                 </div>
                
@@ -317,22 +346,23 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-container">
-            <img src="images/logo.png" alt="Oksana Pleshkan logo" class="hero-logo">
+            <img src="images/logo.png" width="98" height="169" alt="Oksana Pleshkan monogram: a pale lavender mark formed from curved, overlapping letter shapes." class="hero-logo">
             <div class="footer-links">
-                <a href="https://oksana-pl.github.io/Portfolio_Oksana/" target="_blank" class="contacts__icon_wrapper">
-                    <img src="images/porfolio.png" alt="my portfolio icon" class="contacts__icon">
-                    Other Projects <span class="arrow">↗</span>
+                <a href="https://oksana-pl.github.io/Portfolio_Oksana/" target="_blank" class="contacts__icon_wrapper" rel="noopener noreferrer" aria-describedby="new-tab-note">
+                    <img src="images/porfolio.png" width="959" height="957" alt="" class="contacts__icon">
+                    Other Projects <span class="arrow" aria-hidden="true">↗</span>
                 </a>
-                <a href="https://www.behance.net/oksanapleshkan" target="_blank" class="contacts__icon_wrapper">
-                    <img src="images/behance.png" alt="Behance icon" class="contacts__icon">
-                    Behance <span class="arrow">↗</span>
+                <a href="https://www.behance.net/oksanapleshkan" target="_blank" class="contacts__icon_wrapper" rel="noopener noreferrer" aria-describedby="new-tab-note">
+                    <img src="images/behance.png" width="959" height="957" alt="" class="contacts__icon">
+                    Behance <span class="arrow" aria-hidden="true">↗</span>
                 </a>
-                <a href="https://www.linkedin.com/in/oksana-pleshkan-3b8a41268/" target="_blank" class="contacts__icon_wrapper">
-                    <img src="images/linkedIn.png" alt="LinkedIn icon" class="contacts__icon">
-                    LinkedIn <span class="arrow">↗</span>
+                <a href="https://www.linkedin.com/in/oksana-pleshkan-3b8a41268/" target="_blank" class="contacts__icon_wrapper" rel="noopener noreferrer" aria-describedby="new-tab-note">
+                    <img src="images/linkedIn.png" width="959" height="957" alt="" class="contacts__icon">
+                    LinkedIn <span class="arrow" aria-hidden="true">↗</span>
                 </a>
         </div>
     </footer>
+    <span id="new-tab-note" class="visually-hidden">Opens in a new tab</span>
 </body>
 
 </html>

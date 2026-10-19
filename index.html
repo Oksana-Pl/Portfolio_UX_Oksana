@@ -29,20 +29,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <script src="script.js" defer></script>
+
+    <link rel="canonical" href="https://oksana-pl.github.io/Portfolio_UX_Oksana/">
+    <meta property="og:image:alt" content="UX/UI Designer Oksana Pleshkan: blue-grey lettering and a pale lavender monogram on a light background">
+    <meta name="twitter:image:alt" content="UX/UI Designer Oksana Pleshkan: blue-grey lettering and a pale lavender monogram on a light background">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://oksana-pl.github.io/Portfolio_UX_Oksana/#person",
+    "name": "Oksana Pleshkan",
+    "jobTitle": "UX/UI Designer",
+    "url": "https://oksana-pl.github.io/Portfolio_UX_Oksana/",
+    "sameAs": [
+        "https://www.behance.net/oksanapleshkan",
+        "https://www.linkedin.com/in/oksana-pleshkan-3b8a41268/"
+    ]
+}
+    </script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Header -->
     <header class="header">
         <div class="header-content">
             <a href="#hero" style="display: flex;">
-                <h3 style="font-weight:500;">Oksana Pleshkan <br>
+                <p class="header-brand">Oksana Pleshkan <br>
                     <span>UX/UI Designer</span>
-                </h3>
+                </p>
             </a>
 
-            <nav>
+            <nav aria-label="Main navigation">
                 <a href="#about">About</a>
                 <a href="#case-studies">Case Studies</a>
                 <a href="#contact">Contact Me</a>
@@ -50,16 +69,16 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
 
         <!-- Hero -->
         <section class="section hero" id="hero">
             <div class="container hero-container">
-                <img src="images/logo.png" alt="Oksana Pleshkan logo" class="hero-logo">
+                <img src="images/logo.png" width="98" height="169" alt="Oksana Pleshkan monogram: a pale lavender mark formed from curved, overlapping letter shapes." class="hero-logo">
                 <!-- <img src="images/photo.png" alt="beautiful muslim woman" class="hero-image"> -->
 
                 <div class="hero-content">
-                    <p class="hero-intro"><em>Hi, my name is Oksana</em></p>
+                    <h1 class="hero-intro"><em>Hi, my name is Oksana</em></h1>
 
                     <p class="hero-description">
                         I am a UX/UI Designer striving to make digital experiences simple, clear and accessible for everyone. I enjoy research, conducting surveys and interviews with users to understand their pain points and problems. I think through the best user journeys to meet both users’ needs and business goals. I believe that designing a solution without research is just a waste of resources.
@@ -71,13 +90,13 @@
 
                         <!-- <a href="https://www.behance.net/oksanapleshkan" target="_blank">Behance ↗</a> -->
                         <a href="https://www.linkedin.com/in/oksana-pleshkan-3b8a41268/" target="_blank"
-                            class="contacts__icon_wrapper">
-                            <img src="images/linkedIn.png" alt="LinkedIn icon" class="contacts__icon">
-                            LinkedIn <span class="arrow">↗</span>
+                            class="contacts__icon_wrapper" rel="noopener noreferrer" aria-describedby="new-tab-note">
+                            <img src="images/linkedIn.png" width="959" height="957" alt="" class="contacts__icon">
+                            LinkedIn <span class="arrow" aria-hidden="true">↗</span>
                         </a>
                         <a href="mailto:oksana1.1pleshkan@gmail.com" class="contacts__icon_wrapper">
-                            <img src="images/email.png" alt="email icon" class="contacts__icon">
-                            Send me email <span class="arrow">↗</span>
+                            <img src="images/email.png" width="959" height="957" alt="" class="contacts__icon">
+                            Send me email <span class="arrow" aria-hidden="true">↗</span>
                         </a>
                     </div>
                     <!-- <div class="hero-links">
@@ -101,8 +120,8 @@
         <section class="section section--alt">
             <div class="container case-study">
                 <div class="case-study__content">
-                    <h3 class="case-study__title">Climate Finance App</h3>
-                         <h2 class="case-study-subtitle">A work placement project developed for Trócaire</h2>
+                    <h2 class="case-study__title">Climate Finance App</h2>
+                         <p class="case-study-subtitle">A work placement project developed for Trócaire</p>
                     <p class="case-study__text">Working with <a href="https://www.trocaire.org/about/" style="color: #4d6d89; text-decoration: underline;">Trócaire</a>, an International Non-Governmental Organisation, I developed an early educational idea into a working digital tool for facilitated school workshops. The aim was to help young people explore how real climate finance negotiations work.</p>
                     <p class="case-study__text">My work covered research, game mechanics, user flows, interface design, prototyping, testing and iteration.</p>
                     <!-- <div class="tag-list">
@@ -111,13 +130,13 @@
                         <div class="tag">Working Web App</div>
                     </div> -->
                     <div class="button-group">
-                        <a href="climate_finance.html" class="btn">Learn More</a>
-                        <a href="https://www.figma.com/design/y3qvf4ztJXnjUQK8KrXsee/Climate-finance?node-id=140-248" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">View in Figma</a>
-                    <a href="https://oksana-pl.github.io/climate-finance/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">View Live App</a>
+                        <a href="climate_finance.html" class="btn" aria-label="Learn More: Climate Finance App">Learn More</a>
+                        <a href="https://www.figma.com/design/y3qvf4ztJXnjUQK8KrXsee/Climate-finance?node-id=140-248" target="_blank" rel="noopener noreferrer" class="btn btn--secondary" aria-describedby="new-tab-note" aria-label="View in Figma: Climate Finance App">View in Figma</a>
+                    <a href="https://oksana-pl.github.io/climate-finance/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary" aria-describedby="new-tab-note" aria-label="View Live App: Climate Finance App">View Live App</a>
                     </div>
                 </div>
                 <div class="case-study__media">
-                    <img src="images/climate-dashboard.png" alt="Climate Finance dashboard designed with and for Trócaire" class="case-study__image" loading="lazy" decoding="async">
+                    <img src="images/climate-dashboard.png" width="1000" height="712" alt="Climate Finance Dashboard with a funding thermometer, a current total, progress bars for mitigation, adaptation and loss and damage, and contribution controls." class="case-study__image" loading="lazy" decoding="async">
                     
                 </div>
             </div>
@@ -127,12 +146,12 @@
         <section class="section section--alt">
             <div class="container case-study case-study--reverse">
                 <div class="case-study__media">
-                    <img src="images/mus.png" alt="Online platform preview" class="case-study__image" />
+                    <img src="images/mus.png" width="632" height="400" alt="Social platform profile with a portrait, mountain-lake photo post, left navigation and a contacts sidebar with purple action buttons." class="case-study__image" />
                 </div>
 
                 <div class="case-study__content">
-                    <h3 class="case-study__title">Online Platform for Muslim Women</h3>
-                        <h2 class="case-study-subtitle">University project</h2>
+                    <h2 class="case-study__title">Online Platform for Muslim Women</h2>
+                        <p class="case-study-subtitle">University project</p>
 
                     <p class="case-study__text">
                         A social platform designed for Muslim women with gender verification at registration.
@@ -148,9 +167,9 @@
                     </div> -->
 
                     <div class="button-group">
-                        <a href="muslim_pl.html" class="btn">Learn More</a>
+                        <a href="muslim_pl.html" class="btn" aria-label="Learn More: Online Platform for Muslim Women">Learn More</a>
                         <a href="https://www.figma.com/proto/xCIioUYWjFJmi1hpnfBLRX/muslim-platform-design?node-id=266-2265&t=c6kMhMsfET7o0JbZ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2"
-                            target="_blank" class="btn btn--secondary">View in Figma</a>
+                            target="_blank" class="btn btn--secondary" rel="noopener noreferrer" aria-describedby="new-tab-note" aria-label="View in Figma: Online Platform for Muslim Women">View in Figma</a>
                     </div>
                 </div>
             </div>
@@ -160,8 +179,8 @@
         <section class="section section--alt">
             <div class="container case-study">
                 <div class="case-study__content">
-                    <h3 class="case-study__title">Minimal E-commerce Design System</h3>
-                        <h2 class="case-study-subtitle">University project</h2>
+                    <h2 class="case-study__title">Minimal E-commerce Design System</h2>
+                        <p class="case-study-subtitle">University project</p>
 
                     <p class="case-study__text">
                         I created a reusable design system for e-commerce interfaces to improve UI consistency,
@@ -180,17 +199,17 @@
                     </div> -->
 
                     <div class="button-group">
-                        <a href="design_sys.html" class="btn">Learn More</a>
+                        <a href="design_sys.html" class="btn" aria-label="Learn More: Minimal E-commerce Design System">Learn More</a>
                         <a href="https://www.figma.com/community/file/1610801255815720511" target="_blank" rel="noopener noreferrer"
-                            class="btn btn--secondary">View in Figma</a>
+                            class="btn btn--secondary" aria-describedby="new-tab-note" aria-label="View in Figma: Minimal E-commerce Design System">View in Figma</a>
                         <a href="https://oksana-pl.github.io/Project_1/docs/colours.html" target="_blank" rel="noopener noreferrer"
-                            class="btn btn--secondary">Explore HTML/CSS Library</a>
+                            class="btn btn--secondary" aria-describedby="new-tab-note" aria-label="Explore HTML/CSS Library: Minimal E-commerce Design System">Explore HTML/CSS Library</a>
                     </div>
                 </div>
 
                 <div class="case-study__media">
-                    <img src="images/ds1.png" alt="Design system preview" class="case-study__image" />
-                    <img src="images/ds1.2.png" alt="Design system details"
+                    <img src="images/ds1.png" width="621" height="442" alt="Minimal E-commerce Design System cover with a large title, desktop and mobile fashion-shop layouts, typography examples and colour swatches." class="case-study__image" />
+                    <img src="images/ds1.2.png" width="621" height="83" alt="Horizontal overview of e-commerce design-system frames, including the cover, fashion-shop page layouts, colour swatches and typography samples."
                         class="case-study__image case-study__image--small" />
                 </div>
             </div>
@@ -200,12 +219,12 @@
         <section class="section section--alt">
             <div class="container case-study case-study--reverse">
                 <div class="case-study__media">
-                    <img src="images/zoo-project.png" alt="Online platform preview" class="case-study__image" />
+                    <img src="images/zoo-project.png" width="2246" height="1302" alt="Zoo navigation research document headed Main Project Preparation, with a meerkat cover image and a Problem Statement about accessible zoo information." class="case-study__image" />
                 </div>
 
                 <div class="case-study__content">
-                    <h3 class="case-study__title">Accessible Zoo Navigation</h3>
-                        <h2 class="case-study-subtitle">Final Year Project <span style="color:#4d6d89">(In Progress)</span></h2>
+                    <h2 class="case-study__title">Accessible Zoo Navigation</h2>
+                        <p class="case-study-subtitle">Final Year Project <span style="color:#4d6d89">(In Progress)</span></p>
 
                     <p class="case-study__text">
                         I’m exploring how people who are blind or have low vision can visit a zoo independently and safely while getting the most out of the experience. My research focuses on the barriers they face and how a digital navigation tool could help them explore, learn and enjoy their visit. </p>
@@ -270,7 +289,7 @@
                 <div class="cards-grid cards-grid--4">
                     <article class="card">
                         <div class="card__icon-wrapper">
-                            <img src="icons/exsp.svg" alt="experience icon" class="card__icon">
+                            <img src="icons/exsp.svg" alt="" class="card__icon">
                         </div>
 
                         <h3 class="card__title">2+ Years of Experience</h3>
@@ -282,7 +301,7 @@
 
                     <article class="card">
                         <div class="card__icon-wrapper">
-                            <img src="icons/ui_ux.svg" alt="ui and ux design icon" class="card__icon">
+                            <img src="icons/ui_ux.svg" alt="" class="card__icon">
                         </div>
 
                         <h3 class="card__title">UX Research</h3>
@@ -294,7 +313,7 @@
 
                     <article class="card">
                         <div class="card__icon-wrapper">
-                            <img src="icons/coding.svg" alt="coding and programming icon" class="card__icon">
+                            <img src="icons/coding.svg" alt="" class="card__icon">
                         </div>
 
                         <h3 class="card__title">Skilled in HTML &amp; CSS</h3>
@@ -306,7 +325,7 @@
 
                     <article class="card">
                         <div class="card__icon-wrapper">
-                            <img src="icons/dezSyst.svg" alt="design system icon" class="card__icon">
+                            <img src="icons/dezSyst.svg" alt="" class="card__icon">
                         </div>
 
                         <h3 class="card__title">Design Systems &amp; Components</h3>
@@ -318,7 +337,7 @@
 
                     <article class="card">
                         <div class="card__icon-wrapper">
-                            <img src="icons/user_fr.svg" alt="users icon" class="card__icon">
+                            <img src="icons/user_fr.svg" alt="" class="card__icon">
                         </div>
 
                         <h3 class="card__title">User-Centred Thinking</h3>
@@ -330,7 +349,7 @@
 
                     <article class="card">
                         <div class="card__icon-wrapper">
-                            <img src="icons/motion.svg" class="card__icon" alt="motion graphics icon">
+                            <img src="icons/motion.svg" class="card__icon" alt="">
                         </div>
 
                         <h3 class="card__title">Graphic &amp; Motion Design</h3>
@@ -342,7 +361,7 @@
 
                     <article class="card">
                         <div class="card__icon-wrapper">
-                            <img src="icons/details.svg" alt="details icon" class="card__icon">
+                            <img src="icons/details.svg" alt="" class="card__icon">
                         </div>
 
                         <h3 class="card__title">Attention to Detail</h3>
@@ -354,7 +373,7 @@
 
                     <article class="card">
                         <div class="card__icon-wrapper">
-                            <img src="icons/team.svg" alt="team icon" class="card__icon">
+                            <img src="icons/team.svg" alt="" class="card__icon">
                         </div>
 
                         <h3 class="card__title">Team Collaboration</h3>
@@ -381,7 +400,7 @@
                             Programme Leader: <br>Creative Media and UX Design<br>
                             TUS Clonmel Campus
                         </p>
-                        <a href="https://www.linkedin.com/in/caitriona-ni-chasaide-1522b612/">
+                        <a href="https://www.linkedin.com/in/caitriona-ni-chasaide-1522b612/" aria-label="LinkedIn Profile: Dr Caitríona Ní Chasaide">
                             LinkedIn Profile ↗
                         </a>
                         <!-- <a href="mailto:your@email.com
@@ -398,7 +417,7 @@
                             Technological University of the Shannon<br>
                             Clonmel
                         </p>
-                        <a href="https://www.linkedin.com/in/eamondalton/">
+                        <a href="https://www.linkedin.com/in/eamondalton/" aria-label="LinkedIn Profile: Eamon Dalton">
                             LinkedIn Profile ↗
                         </a>
                         <!-- <a href="mailto:your@email.com
@@ -418,7 +437,7 @@ Request Contact ↗
                         <a
                             href="mailto:musa.medvedev@amu.org.ua
 ?subject=Reference%20Check%20-%20Oksana%20Pleshkan
-&body=Hello%20Serhii,%0D%0A%0D%0AI%20hope%20you%20are%20well.%0D%0A%0D%0AI%20am%20currently%20reviewing%20an%20application%20from%20Oksana%20Pleshkan%20and%20understand%20that%20you%20have%20worked%20with%20her.%0D%0A%0D%0AI%20would%20greatly%20appreciate%20it%20if%20you%20could%20share%20your%20feedback%20on%20her%20skills,%20work%20ethic,%20and%20overall%20performance.%0D%0A%0D%0AThank%20you%20in%20advance%20for%20your%20time.%0D%0A%0D%0AKind%20regards,%0D%0A">
+&body=Hello%20Serhii,%0D%0A%0D%0AI%20hope%20you%20are%20well.%0D%0A%0D%0AI%20am%20currently%20reviewing%20an%20application%20from%20Oksana%20Pleshkan%20and%20understand%20that%20you%20have%20worked%20with%20her.%0D%0A%0D%0AI%20would%20greatly%20appreciate%20it%20if%20you%20could%20share%20your%20feedback%20on%20her%20skills,%20work%20ethic,%20and%20overall%20performance.%0D%0A%0D%0AThank%20you%20in%20advance%20for%20your%20time.%0D%0A%0D%0AKind%20regards,%0D%0A" aria-label="Send Email: Serhii Medvediev">
                             Send Email ↗
                         </a>
                     </article>
@@ -462,24 +481,25 @@ Request Contact ↗
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-container">
-            <img src="images/logo.png" alt="Oksana Pleshkan logo" class="hero-logo">
+            <img src="images/logo.png" width="98" height="169" alt="Oksana Pleshkan monogram: a pale lavender mark formed from curved, overlapping letter shapes." class="hero-logo">
             <div class="footer-links">
-                <a href="https://oksana-pl.github.io/Portfolio_Oksana/" target="_blank" class="contacts__icon_wrapper">
-                    <img src="images/porfolio.png" alt="my portfolio icon" class="contacts__icon">
-                    Other Projects <span class="arrow">↗</span>
+                <a href="https://oksana-pl.github.io/Portfolio_Oksana/" target="_blank" class="contacts__icon_wrapper" rel="noopener noreferrer" aria-describedby="new-tab-note">
+                    <img src="images/porfolio.png" width="959" height="957" alt="" class="contacts__icon">
+                    Other Projects <span class="arrow" aria-hidden="true">↗</span>
                 </a>
-                <a href="https://www.behance.net/oksanapleshkan" target="_blank" class="contacts__icon_wrapper">
-                    <img src="images/behance.png" alt="Behance icon" class="contacts__icon">
-                    Behance <span class="arrow">↗</span>
+                <a href="https://www.behance.net/oksanapleshkan" target="_blank" class="contacts__icon_wrapper" rel="noopener noreferrer" aria-describedby="new-tab-note">
+                    <img src="images/behance.png" width="959" height="957" alt="" class="contacts__icon">
+                    Behance <span class="arrow" aria-hidden="true">↗</span>
                 </a>
                 <a href="https://www.linkedin.com/in/oksana-pleshkan-3b8a41268/" target="_blank"
-                    class="contacts__icon_wrapper">
-                    <img src="images/linkedIn.png" alt="LinkedIn icon" class="contacts__icon">
-                    LinkedIn <span class="arrow">↗</span>
+                    class="contacts__icon_wrapper" rel="noopener noreferrer" aria-describedby="new-tab-note">
+                    <img src="images/linkedIn.png" width="959" height="957" alt="" class="contacts__icon">
+                    LinkedIn <span class="arrow" aria-hidden="true">↗</span>
                 </a>
             </div>
     </footer>
 
+    <span id="new-tab-note" class="visually-hidden">Opens in a new tab</span>
 </body>
 
 </html>
